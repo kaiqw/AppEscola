@@ -51,9 +51,9 @@ public class InserirALunoActivity extends AppCompatActivity {
     private void gravarBanco (String nomeAluno, String idadeAluno, String cursoALuno){
         StringBuilder sql = new StringBuilder();
         sql.append("INSERT INTO aluno(nome, idade, curso) VALUES(");
-        sql.append( nomeAluno +  ", ");
+        sql.append("'" + nomeAluno +  "', ");
         sql.append( idadeAluno + ",");
-        sql.append( cursoALuno );
+        sql.append("'" + cursoALuno + "'");
         sql.append(")");
 
         try {
